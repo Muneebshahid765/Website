@@ -1,0 +1,483 @@
+/* Base Hero Section Styles */
+#hero {
+  height: 100vh;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Track containing all images */
+.carousel-track {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+/* Base carousel slide styles */
+.carousel-slide {
+  position: relative;
+  flex: 0 0 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Right-side vertical dots - Base positioning */
+.hero-indicators.right {
+  position: absolute;
+  right: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 2;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background-color: var(--primary);
+  transform: scale(1.3);
+}
+
+.indicator:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* App Promo Section */
+#app-promo {
+  background: linear-gradient(135deg, var(--dark), #222);
+  color: white;
+}
+
+.app-promo-container {
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.app-promo-text {
+  padding-left: 25px;
+  flex: 1;
+  animation: fadeInLeft 1s ease;
+}
+
+.app-promo-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #fff, #ddd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.app-promo-text p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.app-promo-image {
+  flex: 1;
+  position: relative;
+  animation: fadeInRight 1s ease;
+}
+
+.app-promo-image img {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  transform: perspective(1000px) rotateY(-15deg);
+  transition: all 0.5s ease;
+}
+
+.app-promo-image:hover img {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.Mobile-Footer {
+  visibility: hidden;
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS FOR DEVICES
+======================================== */
+
+/* Large Desktop (1920px+) */
+@media (min-width: 1920px) {
+  #hero {
+    height: 85vh;
+  }
+  
+  .carousel-slide {
+    top: 17%;
+    height: 85%;
+  }
+  
+  .hero-indicators.right {
+    top: 85%;
+    right: 48%;
+  }
+}
+
+/* Desktop (1440px - 1919px) */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  #hero {
+    height: 75vh;
+    min-height: 600px;
+  }
+  
+  .carousel-slide {
+    top: 18%;
+    height: 82%;
+  }
+  
+  .hero-indicators.right {
+    top: 82%;
+    right: 48%;
+  }
+}
+
+/* Laptop (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  #hero {
+    height: 70vh;
+    min-height: 600px;
+  }
+  
+  .carousel-slide {
+    top: 17%;
+    height: 87%;
+  }
+  
+  .hero-indicators.right {
+    top: 80%;
+    right: 47%;
+  }
+}
+
+/* Tablet Landscape (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #hero {
+    height: 0vh;
+    min-height: 450px;
+  }
+  
+  .carousel-slide {
+    top: 35%;
+    height: 65%;
+  }
+  
+  .hero-indicators.right {
+    top: 85%;
+    right: 45%;
+  }
+  
+  .Mobile-Footer {
+    visibility: visible;
+  }
+  
+  #app-promo {
+   
+    visibility: hidden;
+    
+  }
+}
+
+/* Tablet Portrait (600px - 767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+  #hero {
+    height: 0vh;
+    min-height: 400px;
+  }
+  
+  .carousel-slide {
+    top: 30%;
+    height: 70%;
+  }
+  
+  .hero-indicators.right {
+    top: 90%;
+    right: 43%;
+  }
+  
+  .Mobile-Footer {
+    visibility: visible;
+  }
+  
+  #app-promo {
+   
+    visibility: hidden;
+  
+  }
+  
+  #payment-partners {
+    height: 0px;
+    visibility: hidden;
+    padding: 0px;
+    margin: 0%;
+  }
+}
+
+/* Mobile Large (480px - 599px) */
+@media (min-width: 480px) and (max-width: 599px) {
+  #hero {
+    height: 0vh;
+    min-height: 350px;
+  }
+  
+  .carousel-slide {
+    top: 31%;
+    height: 70%;
+  }
+  
+  .hero-indicators.right {
+    top: 95%;
+    right: 40%;
+  }
+  
+  .Mobile-Footer {
+    visibility: visible;
+  }
+  
+  #app-promo {
+    height: 0px;
+    visibility: hidden;
+    padding: 0%;
+    margin: 0%;
+  }
+  
+  #payment-partners {
+    height: 0px;
+    visibility: hidden;
+    padding: 0px;
+    margin: 0%;
+  }
+}
+
+/* Mobile Medium (375px - 479px) */
+@media (min-width: 375px) and (max-width: 479px) {
+  #hero {
+    height: 0vh;
+    min-height: 320px;
+  }
+  
+  .carousel-slide {
+    top: 37%;
+    height: 64%;
+  }
+  
+  .hero-indicators.right {
+    top: 96%;
+    right: 38%;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .Mobile-Footer {
+    visibility: visible;
+  }
+  
+  #app-promo {
+    height: 0px;
+    visibility: hidden;
+    padding: 0%;
+    margin: 0%;
+  }
+  
+  #payment-partners {
+    height: 0px;
+    visibility: hidden;
+    padding: 0px;
+    margin: 0%;
+  }
+}
+
+/* Mobile Small (320px - 374px) */
+@media (min-width: 320px) and (max-width: 374px) {
+  #hero {
+    height: 0vh;
+    min-height: 280px;
+  }
+  
+  .carousel-slide {
+    top: 37%;
+    height: 64%;
+  }
+  
+  .hero-indicators.right {
+    top: 98%;
+    right: 35%;
+  }
+  
+  .indicator {
+    width: 8px;
+    height: 8px;
+    gap: 8px;
+  }
+  
+  .Mobile-Footer {
+    visibility: visible;
+  }
+  
+  #app-promo {
+    height: 0px;
+    visibility: hidden;
+    padding: 0%;
+    margin: 0%;
+  }
+  
+  #payment-partners {
+    height: 0px;
+    visibility: hidden;
+    padding: 0px;
+    margin: 0%;
+  }
+}
+
+/* Extra Small Mobile (below 320px) */
+@media (max-width: 319px) {
+  #hero {
+    height: 0vh;
+    min-height: 250px;
+  }
+  
+  .carousel-slide {
+    top: 3%;
+    height: 94%;
+  }
+  
+  .hero-indicators.right {
+    top: 99%;
+    right: 32%;
+  }
+  
+  .indicator {
+    width: 6px;
+    height: 6px;
+    gap: 6px;
+  }
+  
+  .Mobile-Footer {
+    visibility: visible;
+  }
+  
+  #app-promo {
+    height: 0px;
+    visibility: hidden;
+    padding: 0%;
+    margin: 0%;
+  }
+  
+  #payment-partners {
+    height: 0px;
+    visibility: hidden;
+    padding: 0px;
+    margin: 0%;
+  }
+}
+
+/* ========================================
+   SPECIAL ORIENTATIONS
+======================================== */
+
+/* Landscape orientation for mobile devices */
+@media (max-height: 500px) and (orientation: landscape) {
+  #hero {
+    height: 0vh;
+    min-height: 300px;
+  }
+  
+  .carousel-slide {
+    top: 10%;
+    height: 80%;
+  }
+  
+  .hero-indicators.right {
+    top: 95%;
+    right: 45%;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .carousel-slide {
+    background-size: cover;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY & PERFORMANCE
+======================================== */
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    transition: none;
+  }
+  
+  .indicator {
+    transition: none;
+  }
+  
+  .app-promo-text,
+  .app-promo-image {
+    animation: none;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .indicator {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .indicator:hover {
+    background-color: rgba(100, 90, 3, 0.808);
+  }
+}
+@media (max-width: 1023px){
+  .site-footer{
+    display:block;
+    line-height: 0%;
+  }
+  #app-promo{
+    display:block;
+     line-height: 0%;   
+  }
+  .app-promo-container image{
+    display: block;
+    line-height: 0%;
+  }
+
+
+#payment-partners {
+  height: 0;
+  overflow: hidden; /* Ensures no accidental spacing */
+}
+
+ }

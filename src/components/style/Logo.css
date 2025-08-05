@@ -1,0 +1,83 @@
+/* KuyaplayText.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-logo-container {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+.kuyaplay-3d-text {
+    font-family: 'Arial Black', Arial, sans-serif;
+    font-size: 37px;
+    font-weight: bold;
+    color: #FFD700;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    
+    /* 3D Effect - Multiple layers going back */
+    text-shadow: 
+        1px 1px 0 #E6C200,
+        2px 2px 0 #CC8400,
+        3px 3px 0 #B8860B,
+        4px 4px 0 #A67C00,
+        5px 5px 0 #947300,
+        6px 6px 0 #826900,
+        7px 7px 0 #705F00,
+        8px 8px 0 #5E5600,
+        9px 9px 0 #4C4C00,
+        10px 10px 0 #3A4200,
+        11px 11px 0 #283900,
+        12px 12px 0 #162F00,
+        13px 13px 0 #042600,
+        14px 14px 0 #001C00,
+        15px 15px 0 #001300,
+        16px 16px 0 #000900,
+        17px 17px 0 #000600,
+        18px 18px 0 #000300,
+        19px 19px 0 #000100,
+        20px 20px 0 #000000,
+        21px 21px 0 #000000,
+        22px 22px 0 #000000,
+        23px 23px 0 #000000,
+        24px 24px 0 #000000,
+        25px 25px 5px rgba(0,0,0,0.8),
+        30px 30px 10px rgba(0,0,0,0.6),
+        35px 35px 15px rgba(0,0,0,0.4),
+        40px 40px 20px rgba(0,0,0,0.2);
+    
+    /* Slight perspective tilt */
+    transform: perspective(1000px) rotateX(5deg) rotateY(-2deg);
+    
+    /* Additional glow effect */
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .kuyaplay-3d-text {
+        font-size: 35px;
+        letter-spacing: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    .kuyaplay-3d-text {
+        font-size: 25px;
+        letter-spacing: 0px;
+    }
+}
+
+@media (max-width: 300px) {
+    .kuyaplay-3d-text {
+        font-size: 17px;
+        letter-spacing: 0px;
+    }
+}

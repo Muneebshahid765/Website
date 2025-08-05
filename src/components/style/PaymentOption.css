@@ -1,0 +1,35 @@
+.partners-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+.payment-title{
+  display:flex;
+  justify-content: center;
+}
+#payment-partners{
+  padding: 50px 0px;
+  background: linear-gradient(0deg, #66a8eb, #f9f8f8, #1c1e1c);
+}
+.partners-logos img {
+  height: 50px;
+  background:linear-gradient(45deg, #66a8eb, #f9f8f8, #1c1e1c, #66a8eb, #f9f8f8, #1c1e1c);
+  opacity: 0.7;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.partners-logos img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@media (max-width: 1023px) {
+  #payment-partners {
+    display: none !important; /* Completely removes from layout */
+  }
+  
+}
